@@ -1,0 +1,6 @@
+c:\users\ceibal\documents\visual studio 2017\Projects\proyecto final yo\proyecto final yo\bin\Debug\proyecto final yo.exe.config
+c:\users\ceibal\documents\visual studio 2017\Projects\proyecto final yo\proyecto final yo\bin\Debug\proyecto final yo.exe
+c:\users\ceibal\documents\visual studio 2017\Projects\proyecto final yo\proyecto final yo\bin\Debug\proyecto final yo.pdb
+c:\users\ceibal\documents\visual studio 2017\Projects\proyecto final yo\proyecto final yo\obj\Debug\proyecto final yo.csprojResolveAssemblyReference.cache
+c:\users\ceibal\documents\visual studio 2017\Projects\proyecto final yo\proyecto final yo\obj\Debug\proyecto final yo.exe
+c:\users\ceibal\documents\visual studio 2017\Projects\proyecto final yo\proyecto final yo\obj\Debug\proyecto final yo.pdb
