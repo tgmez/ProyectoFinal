@@ -213,6 +213,8 @@ namespace proyecto_final_yo.controladores
 				Console.WriteLine("Inteligencia: {0}", item.Inteligencia);
 				Console.WriteLine("Sabiduria: {0}", item.Sabiduria);
 				Console.WriteLine("Carisma: {0}", item.Carisma);
+				Console.WriteLine("Raza: {0}", RazaDAO.obtenerPorPersonaje(item.Id).nombre);
+				Console.WriteLine("Clase: {0}", ClasesDAO.obtenerPorIdPersonaje(item.Id).Nombre);
 				Console.WriteLine("****Caracteristicas Variables****");
 				if (PersonajeCaracteristicaDAO.obtenerCaracteristicaPersonajesPorPersonaje(item.Id).Count == 0) Console.WriteLine("Vacio");
 				foreach (PersonajeCaracteristica personajeCaracteristica in PersonajeCaracteristicaDAO.obtenerCaracteristicaPersonajesPorPersonaje(item.Id)) {
@@ -291,10 +293,12 @@ namespace proyecto_final_yo.controladores
 
 			if (((personaje.Nivel+1) % 2 != 0) && ((personaje.Nivel + 1) != 1)) {
 				//aumentar caracteristica
-				Console.WriteLine("Seleccione que tipo de caracteristica desea aumentar:");
+				/*Console.WriteLine("Seleccione que tipo de caracteristica desea aumentar:");
 				Console.WriteLine("1- Fija");
 				Console.WriteLine("2- Variable");
-				int opcion = InputUtils.leerInt(1, 2);
+				int opcion = InputUtils.leerInt(1, 2);*/
+				//se comenta el codigo anterior en caso de que se requiera editar caracteristica fija en un futuro.
+				int opcion = 2;
 				switch (opcion)
 				{
 					case 1:
@@ -311,9 +315,13 @@ namespace proyecto_final_yo.controladores
 							switch (opcion2)
 							{
 								case 1:
-									if (personaje.Fuerza < 10) {
+									if (personaje.Fuerza < 10)
+									{
 										personaje.Fuerza++;
 										ingresoCorrecto = true;
+									}
+									else {
+										Console.WriteLine("La habilidad ya tiene el maximo puntaje");
 									}
 									break;
 								case 2:
@@ -322,12 +330,20 @@ namespace proyecto_final_yo.controladores
 										personaje.Destreza++;
 										ingresoCorrecto = true;
 									}
+									else
+									{
+										Console.WriteLine("La habilidad ya tiene el maximo puntaje");
+									}
 									break;
 								case 3:
 									if (personaje.Constitucion < 10)
 									{
 										personaje.Constitucion++;
 										ingresoCorrecto = true;
+									}
+									else
+									{
+										Console.WriteLine("La habilidad ya tiene el maximo puntaje");
 									}
 									break;
 								case 4:
@@ -336,6 +352,10 @@ namespace proyecto_final_yo.controladores
 										personaje.Inteligencia++;
 										ingresoCorrecto = true;
 									}
+									else
+									{
+										Console.WriteLine("La habilidad ya tiene el maximo puntaje");
+									}
 									break;
 								case 5:
 									if (personaje.Sabiduria < 10)
@@ -343,12 +363,20 @@ namespace proyecto_final_yo.controladores
 										personaje.Sabiduria++;
 										ingresoCorrecto = true;
 									}
+									else
+									{
+										Console.WriteLine("La habilidad ya tiene el maximo puntaje");
+									}
 									break;
 								case 6:
 									if (personaje.Carisma < 10)
 									{
 										personaje.Carisma++;
 										ingresoCorrecto = true;
+									}
+									else
+									{
+										Console.WriteLine("La habilidad ya tiene el maximo puntaje");
 									}
 									break;
 								default:

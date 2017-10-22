@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.interfaz
 {
-	public class RazaInterfaz
+	public interface RazaInterfaz
 	{
+		void crear(Raza raza);
+		void modificar(Raza raza);
+		List<Raza> listar();
+		void eliminar(Raza raza);
+		Raza obtener(int id);
+		Raza obtenerPorPersonaje(int idPersonaje);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_final_yo.interfaz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,31 +7,31 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.daos
 {
-	public static class ClasesDAO
+	public class ClasesDAO : ClaseInterfaz
 	{
 
 		private static int contadorId = 1;
 
 
-		public static void crear(Clase clase)
+		public  void crear(Clase clase)
 		{
 			clase.Id = contadorId++;
 			Datos.clases.Add(clase);
 
 		}
-		public static void modificar(Clase clase)
+		public  void modificar(Clase clase)
 		{
 
 		}
-		public static List<Clase> listar()
+		public  List<Clase> listar()
 		{
 			return Datos.clases;
 		}
-		public static void eliminar(Clase clase)
+		public  void eliminar(Clase clase)
 		{
 			Datos.clases.Remove(clase);
 		}
-		public static Clase obtener(int id)
+		public  Clase obtener(int id)
 		{
 			foreach (Clase item in Datos.clases)
 			{
@@ -38,7 +39,7 @@ namespace proyecto_final_yo.daos
 			}
 			return null;
 		}
-		public static Clase obtenerPorIdPersonaje(int id)
+		public  Clase obtenerPorIdPersonaje(int id)
 		{
 			foreach (Clase item in Datos.clases)
 			{

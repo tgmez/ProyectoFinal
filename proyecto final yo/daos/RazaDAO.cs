@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_final_yo.interfaz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.daos
 {
-	public static class RazaDAO
+	public  class RazaDAO : RazaInterfaz
 	{
 		private static int contadorId = 1;
 
-		public static void crear(Raza raza)
+		public  void crear(Raza raza)
 		{
 			raza.Id = contadorId++;
 			Datos.razas.Add(raza);
 
 		}
-		public static void modificar(Raza raza)
+		public  void modificar(Raza raza)
 		{
 
 		}
-		public static List<Raza> listar()
+		public  List<Raza> listar()
 		{
 			return Datos.razas;
 		}
-		public static void eliminar(Raza raza)
+		public  void eliminar(Raza raza)
 		{
 			Datos.razas.Remove(raza);
 		}
-		public static Raza obtener(int id)
+		public  Raza obtener(int id)
 		{
 			foreach (Raza item in Datos.razas)
 			{
@@ -36,7 +37,7 @@ namespace proyecto_final_yo.daos
 			}
 			return null;
 		}
-		public static Raza obtenerPorPersonaje(int idPersonaje)
+		public  Raza obtenerPorPersonaje(int idPersonaje)
 		{
 			foreach (Raza item in Datos.razas)
 			{

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.interfaz
 {
-	public class CaracteristicaVariableInterfaz
+	public interface CaracteristicaVariableInterfaz
 	{
+		void crear(CaracteristicaVariable caracteristicaVariable);
+		void modificar(CaracteristicaVariable caracteristicaVariable);
+		List<CaracteristicaVariable> listar();
+		void eliminar(CaracteristicaVariable caracteristicaVariable);
+		CaracteristicaVariable obtener(int id);
 	}
 }

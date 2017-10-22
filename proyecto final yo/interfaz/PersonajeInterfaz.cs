@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.interfaz
 {
-	public class PersonajeInterfaz
+	public interface PersonajeInterfaz
 	{
+		void crear(Personaje personaje);
+		void modificar(Personaje personaje);
+		List<Personaje> listar();
+		void eliminar(Personaje personaje);
+		Personaje obtener(int id);
+		bool personajeTieneRaza(int id);
+		bool personajeTieneClase(int id);
 	}
 }

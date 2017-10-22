@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.interfaz
 {
-	public class HabilidadesEspecialesInterfaz
+	public interface HabilidadesEspecialesInterfaz
 	{
+		void crear(HabilidadEspecial habilidadEspecial);
+		void modificar(HabilidadEspecial habilidadEspecial);
+		List<HabilidadEspecial> listar();
+		void eliminar(HabilidadEspecial habilidadEspecial);
+		HabilidadEspecial obtener(int id);
 	}
 }

@@ -53,10 +53,17 @@
     <Compile Include="daos\PersonajeCaracteristicaDAO.cs" />
     <Compile Include="daos\PersonajeDAO.cs" />
     <Compile Include="daos\RazaDAO.cs" />
+    <Compile Include="fabricas\CaracteristicaVariableFactory.cs" />
+    <Compile Include="fabricas\ClaseFactory.cs" />
+    <Compile Include="fabricas\HabilidadEspecialFactory.cs" />
+    <Compile Include="fabricas\PersonajeCaracteristicaFactory.cs" />
+    <Compile Include="fabricas\PersonajeFactory.cs" />
+    <Compile Include="fabricas\RazaFactory.cs" />
     <Compile Include="InputUtils.cs" />
     <Compile Include="interfaz\CaracteristicaVariableInterfaz.cs" />
     <Compile Include="interfaz\ClaseInterfaz.cs" />
     <Compile Include="interfaz\HabilidadesEspecialesInterfaz.cs" />
+    <Compile Include="interfaz\PersonajeCaracteristicaInterfaz.cs" />
     <Compile Include="interfaz\PersonajeInterfaz.cs" />
     <Compile Include="interfaz\RazaInterfaz.cs" />
     <Compile Include="modelos\CaracteristicaVariable.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_final_yo.interfaz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,32 +7,32 @@ using System.Threading.Tasks;
 
 namespace proyecto_final_yo.daos
 {
-	public static class PersonajeDAO
+	public  class PersonajeDAO : PersonajeInterfaz
 	{
 		private static int contadorId = 1;
 
-		public static void crear(Personaje personaje)
+		public  void crear(Personaje personaje)
 		{
 			personaje.Id = contadorId++;
 			Datos.personajes.Add(personaje);
 
 		}
-		public static void modificar(Personaje personaje)
+		public  void modificar(Personaje personaje)
 		{
 
 		}
-		public static List<Personaje> listar()
+		public  List<Personaje> listar()
 		{
 			return Datos.personajes;
 		}
-		public static void eliminar(Personaje personaje)
+		public  void eliminar(Personaje personaje)
 		{
-			foreach (Raza raza in RazaDAO.listar()) {
+			foreach (Raza raza in new RazaDAO().listar()) {
 				foreach (Personaje p in raza.personajes) {
 					if (p.Id == personaje.Id) raza.personajes.Remove(p);
 				}
 			}
-			foreach (Clase clase in ClasesDAO.listar())
+			foreach (Clase clase in new ClasesDAO().listar())
 			{
 				foreach (Personaje p in clase.personajes)
 				{
@@ -40,7 +41,7 @@ namespace proyecto_final_yo.daos
 			}
 			Datos.personajes.Remove(personaje);
 		}
-		public static Personaje obtener(int id)
+		public  Personaje obtener(int id)
 		{
 			foreach (Personaje item in Datos.personajes)
 			{
@@ -48,18 +49,18 @@ namespace proyecto_final_yo.daos
 			}
 			return null;
 		}
-		public static bool personajeTieneRaza(int id)
+		public  bool personajeTieneRaza(int id)
 		{
-			foreach (Raza raza in RazaDAO.listar()) {
+			foreach (Raza raza in new RazaDAO().listar()) {
 				foreach (Personaje personaje in raza.personajes) {
 					if (personaje.Id == id) return true;
 				}
 			}
 			return false;
 		}
-		public static bool personajeTieneClase(int id)
+		public  bool personajeTieneClase(int id)
 		{
-			foreach (Clase clase in ClasesDAO.listar())
+			foreach (Clase clase in new ClasesDAO().listar())
 			{
 				foreach (Personaje personaje in clase.personajes)
 				{
