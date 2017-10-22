@@ -1,4 +1,6 @@
 ﻿using proyecto_final_yo.daos;
+using proyecto_final_yo.fabricas;
+using proyecto_final_yo.interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,9 @@ namespace proyecto_final_yo.controladores
 {
 	public class ClasesControlador
 	{
+
+		static ClaseInterfaz ClasesDAO = ClaseFactory.Instance.obtenerDAO();
+		static HabilidadesEspecialesInterfaz HabilidadesEspecialesDAO = HabilidadEspecialFactory.Instance.obtenerDAO();
 
 		public static void Crear()
 		{

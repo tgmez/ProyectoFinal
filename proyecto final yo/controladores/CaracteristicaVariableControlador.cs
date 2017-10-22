@@ -1,4 +1,6 @@
 ﻿using proyecto_final_yo.daos;
+using proyecto_final_yo.fabricas;
+using proyecto_final_yo.interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,10 @@ namespace proyecto_final_yo.controladores
 {
 	public static class CaracteristicaVariableControlador
 	{
+
+		static CaracteristicaVariableInterfaz CaracteristicasVariablesDAO = CaracteristicaVariableFactory.Instance.obtenerDAO();
+		static PersonajeInterfaz PersonajeDAO = PersonajeFactory.Instance.obtenerDAO();
+		static PersonajeCaracteristicaInterfaz PersonajeCaracteristicaDAO = PersonajeCaracteristicaFactory.Instance.obtenerDAO();
 
 		public static void Crear()
 		{
