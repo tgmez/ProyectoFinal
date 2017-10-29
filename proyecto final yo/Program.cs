@@ -1,6 +1,7 @@
 ﻿using proyecto_final_yo.controladores;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,23 @@ namespace proyecto_final_yo
 			{
 				Console.Clear();
 				Console.ForegroundColor = ConsoleColor.DarkRed;
+
+/*
+				using (SqlConnection connection = new SqlConnection("Server=DESKTOP-0C9KP3S\\SQLEXPRESS02;Database=ProyectoFinal; Trusted_Connection=True"))
+				{
+					string query = "INSERT INTO CaracteristicaVariable (Id, Nombre) VALUES (@Id, @Nombre)";
+					SqlCommand command = new SqlCommand(query, connection);
+
+					command.Parameters.AddWithValue("@Id", 1);
+					command.Parameters.AddWithValue("@Nombre", "test");
+
+					connection.Open();
+
+					var result = command.ExecuteNonQuery();
+
+					connection.Close();
+				}
+				*/
 
 				Console.WriteLine("                                           `-+s:`                                         ");
 				Console.WriteLine("                                        -ohNm+`                                          ");

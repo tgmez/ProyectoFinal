@@ -286,6 +286,9 @@ namespace proyecto_final_yo.controladores
 
 			if (habilidadesEspecialesAMostrar.Count > 0)
 			{
+				foreach (HabilidadEspecial item in habilidadesEspecialesAMostrar) {
+					Console.WriteLine("Id: {0} --- Nombre: {1} --- Descripción: {2}", item.Id, item.Nombre, item.Descripccion);
+				}
 				Console.WriteLine("Seleccione Id de Habilidad Especial:");
 				int idHabilidadEspecial = InputUtils.leerId();
 				while (habilidadesEspecialesAMostrar.Find(x => x.Id == idHabilidadEspecial) == null) {

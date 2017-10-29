@@ -53,6 +53,7 @@
     <Compile Include="daos\PersonajeCaracteristicaDAO.cs" />
     <Compile Include="daos\PersonajeDAO.cs" />
     <Compile Include="daos\RazaDAO.cs" />
+    <Compile Include="database\ProductoDA.cs" />
     <Compile Include="fabricas\CaracteristicaVariableFactory.cs" />
     <Compile Include="fabricas\ClaseFactory.cs" />
     <Compile Include="fabricas\HabilidadEspecialFactory.cs" />
